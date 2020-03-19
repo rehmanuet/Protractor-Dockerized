@@ -17,13 +17,21 @@ exports.config = {
     },
 
     framework: 'jasmine',
-    directConnect: true, //[@author AR: If enabled, Native machine's chrome will used for the automation]
-//   seleniumAddress: 'http://localhost:4444/wd/hub', // [@author AR: Need to start Selenium-Server]
+    // baseUrl: 'http://seleniumhub:4444',
+
+    // directConnect: false, //[@author AR: If enabled, Native machine's chrome will used for the automation]
+  seleniumAddress: "http://localhost:4444/wd/hub", // [@author AR: Need to start Selenium-Server]
+
+
+//   port:4444,
     specs: ['../test/assignment1.js'],
 //   specs: ['../test/assignment1.js','../test/assignment2.js','../test/assignment3.js','../test/assignment4.js'],
-    capabilities: {
-        browserName: 'chrome'
+capabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+        args: ['--no-sandbox'],
     },
+},
     jasmineNodeOpts: {
         showColors: true,
         includeStackTrace: true,

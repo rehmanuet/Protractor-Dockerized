@@ -1,6 +1,6 @@
-var obj = require('../pom/pom_assignment1')
-var obj1 = require('../pom/pom_assignment2')
-var obj2 = require('../pom/pom_assignment4')
+var obj = require('../pom/pom_tc1')
+var obj1 = require('../pom/pom_tc2')
+var obj2 = require('../pom/pom_tc4')
 var textUtils = require('../helpers/textUtils');
 var home_page = {
     login: function (u1, pass, u2) {

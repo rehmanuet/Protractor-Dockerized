@@ -1,10 +1,10 @@
 # ProtractorJS
 
-POC of ProtractorJS with Jasmine Framework
+POC of Protractor with Jasmine Framework (Both Localize and Dockerize)
 
 ## Stack
 
-<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" /><img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" />
+<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" /><img src="https://static.javatpoint.com/images/javascript/javascript_logo.png?raw=true?raw=true" width="120" height="100" /><img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="120" height="90" /><img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" />
 
 ## Features
 
@@ -17,7 +17,7 @@ POC of ProtractorJS with Jasmine Framework
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine or Docker Container for development and testing purposes.
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 2- Node.js Library
 ```
 
-### Installing
+### Installing (Let's Get Started)
 
 A step by step procedure to run the project on local machine
 
@@ -37,32 +37,33 @@ A step by step procedure to run the project on local machine
 3) Execute "npm install" (It'll download all the dependencies mentioned in package.json)
 ```
 
-### Execution on Local Machine
+### Execution on Local Machine (Peanut Butter)
 
 ```
-npm run local
+npm run localize_test
 ```
 
 ========================================
 
-### Running Protractor Tests on  Docker
+### Running Protractor Tests on Docker (Things about get little dirty)
 
 
-This is a simple tutorial that shows how to use docker to run Protractor tests. We would setup a Selenium Grid and run the tests.
+Now time has come to show you how to use docker to run Protractor tests. Here I would setup a Selenium Grid and run the tests.
 
 ### Prerequisites
 
 Docker needs to be installed on your machine. One can download it from [Docker's website](https://www.docker.com) and follow the [documentation](https://docs.docker.com/) accordingly.
-It is assumed that , one knows the basics of Docker for this tutorial.
+It is assumed that , one knows the basics of Docker for this tutorial unless you live in stone-age :D .
 
 ### Setup
 To ensure Docker is installed sucessfully , type :
 ``` shell
 docker -v
 ```
-and one  would see a similar output , depending on the version of docker installed :
+and one would see a similar output , depending on the version of docker installed :
 ``` shell
-Docker version 1.12.0-rc4, build e4a0dbc, experimental
+C:\Users\abdur.rehman>docker -v
+Docker version 19.03.2, build 6a30dfc
 ``` 
 
 ### Step 0 - Download the docker images for Selenium Hub and Selenium Node
@@ -71,7 +72,7 @@ Docker version 1.12.0-rc4, build e4a0dbc, experimental
 docker pull selenium/hub:latest
 docker pull selenium/node-chrome:latest
 ```
-One could pull 'node-firefox' if they want to work with firefox node. 
+One could pull 'node-firefox' if they want to work with firefox node (Personally I hate firefox, So goddamn slow). 
 For more information about the different images one can work with , please look at [Docker Selenium Images List](https://github.com/SeleniumHQ/docker-selenium/blob/master/README.md)
 
 
@@ -80,25 +81,41 @@ For more information about the different images one can work with , please look 
 docker run -d -p 4444:4444 --name selenium-hub selenium/hub:latest
 ```
 
-One can change the tag from 'latest' to '2.53.0' or any other version as they see fit.
+One can change the tag from 'latest' to '2.53.0' or any other version as they see fit but I recommend to use latest.
 
 ### Step 2 - Starting the Selenium Nodes
 ``` shell
 docker run -d --link selenium-hub:hub selenium/node-chrome:latest
 ```
 
-The above would create a chrome node and link it to the Selenium hub/grid created earlier.
+The above would create a chrome node and link it to the Selenium hub/grid created earlier (linking two images are always cute though!!).
 
-### Step 3 - Running the tests
+### Step 3 - Initializing Docker
 
 Update the seleniumAddress to the url of the hub in your protractor config file.
 
 ``` js
 seleniumAddress: 'http://localhost:4444/wd/hub'
 ```
-and run your tests. 
 
 ``` shell
-npm run docker
+docker build .
 ```
+``` shell
+docker-compose build
+```
+``` shell
+docker-compose up
+```
+``` shell
+docker-compose scale chrome=1
+```
+
+### Step 4 - Running the tests
+and Finally run your tests. 
+
+``` shell
+npm run dockerize_test
+```
+
 _contact:`rehmanuet[at]yahoo[dot]com`_

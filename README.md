@@ -4,7 +4,7 @@ POC of Protractor with Jasmine Framework (Both Localize and Dockerize)
 
 ## Stack
 
-<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" /><img src="https://static.javatpoint.com/images/javascript/javascript_logo.png?raw=true?raw=true" width="120" height="100" /><img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="120" height="90" /><img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" />
+<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" />     <img src="https://static.javatpoint.com/images/javascript/javascript_logo.png?raw=true?raw=true" width="120" height="100" />     <img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="120" height="90" />                <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" />      
 
 ## Features
 
@@ -37,7 +37,7 @@ A step by step procedure to run the project on local machine
 3) Execute "npm install" (It'll download all the dependencies mentioned in package.json)
 ```
 
-### Execution on Local Machine (Peanut Butter)
+## Execution on Local Machine (Peanut Butter)
 
 ```
 npm run localize_test
@@ -45,7 +45,7 @@ npm run localize_test
 
 ========================================
 
-### Running Protractor Tests on Docker (Things about get little dirty)
+## Running Protractor Tests on Docker (Things about get little dirty)
 
 
 Now time has come to show you how to use docker to run Protractor tests. Here I would setup a Selenium Grid and run the tests.
@@ -118,4 +118,4 @@ and Finally run your tests.
 npm run dockerize_test
 ```
 
-_contact:`rehmanuet[at]yahoo[dot]com`_
+_contact:`rehmanuet[at]yahoo[dot]com`_ *or* _[LinkedIn](https://www.linkedin.com/in/rehmanuet/)_

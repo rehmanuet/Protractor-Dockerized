@@ -94,9 +94,6 @@ The above would create a chrome node and link it to the Selenium hub/grid create
 
 Update the seleniumAddress to the url of the hub in your protractor config file.
 
-``` js
-seleniumAddress: 'http://localhost:4444/wd/hub'
-```
 
 ``` shell
 docker build .

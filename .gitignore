@@ -5,3 +5,4 @@ reports/*
 .vs/*
 debug.log
 .idea/*
+.vscode/*

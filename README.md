@@ -115,7 +115,7 @@ and Finally run your tests.
 npm run dockerize_test
 ```
 
-### Step 5 - Debugging th test
+### Step 5 - Debugging the test
 
 
 ``` shell

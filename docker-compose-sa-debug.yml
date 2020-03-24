@@ -6,8 +6,8 @@ services:
       - /dev/shm:/dev/shm
     ports:
       - "4444:4444"
+      - "5900:5900"
   app:
     build: .
-    command: npm run dockerize_test
     depends_on:
       - selenium

@@ -115,4 +115,23 @@ and Finally run your tests.
 npm run dockerize_test
 ```
 
+### Step 5 - Debugging th test
+
+
+``` shell
+docker-compose -f docker-compose-sa-debug.yml up -d
+```
+
+Open VNC Viewer and Connect to following VNC Server
+
+``` shell
+VNC Server: localhost:5900
+```
+
+Execute the test to see the running in actual
+ ``` shell
+ npm run dockerize_test
+ ```
+
+
 _contact:`rehmanuet[at]yahoo[dot]com`_ *or* _[LinkedIn](https://www.linkedin.com/in/rehmanuet/)_

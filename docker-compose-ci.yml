@@ -6,9 +6,9 @@ services:
   chrome:
     image: selenium/node-chrome:latest
     volumes:
-      - /dev/shm:/dev/shm
+    - /dev/shm:/dev/shm
     depends_on:
-      - selenium-hub
+    - selenium-hub
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
@@ -17,11 +17,11 @@ services:
       - selenium-hub
 
     node:
-    container_name: e2e-tests-container
-    build:
-      context: .
-      dockerfile: ./dockerfile
-    volumes:
+      container_name: e2e-tests-container
+      build:
+        context: .
+        dockerfile: ./dockerfile
+      volumes:
       - /dev/shm:/dev/shm
-    depends_on:
+      depends_on:
       - chrome

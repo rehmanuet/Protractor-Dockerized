@@ -24,7 +24,7 @@ services:
     volumes:
       - /dev/shm:/dev/shm
     environment:
-      - HUB_HOST=selenium
+      - HUB_HOST=selenium-hub
       - HUB_PORT=4444
     depends_on:
       - chrome

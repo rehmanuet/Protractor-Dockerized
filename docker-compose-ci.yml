@@ -1,26 +1,27 @@
-version: '3'
+version: "3"
 services:
-  selenium:
-    image: selenium/standalone-chrome-debug
-    volumes: 
-      - /dev/shm:/dev/shm
-    ports:
-      - "4444:4444"
-  app:
-    build: .
-    command: npm run dockerize_test
-    depends_on:
-      - selenium
+  selenium-hub:
+    image: selenium/hub:latest
 
-  node:
-    container_name: e2e-protractor-test
+  chrome:
+    image: selenium/node-chrome:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - START_XVFB=false
+    depends_on: 
+      - selenium-hub
+
+    node:
+    container_name: e2e-tests-container
     build:
       context: .
       dockerfile: ./dockerfile
     volumes:
       - /dev/shm:/dev/shm
-    environment:
-      - HUB_HOST=selenium
-      - HUB_PORT=4444
     depends_on:
-      - selenium
+      - chrome

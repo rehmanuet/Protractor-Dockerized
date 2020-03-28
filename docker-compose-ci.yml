@@ -25,4 +25,4 @@ services:
       - HUB_HOST=selenium
       - HUB_PORT=4444
     depends_on:
-      - chome
+      - chrome

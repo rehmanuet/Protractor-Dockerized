@@ -10,5 +10,4 @@ install:
   - docker-compose -f docker-compose-ci.yml build
 
 script: 
-  - docker-compose -f docker-compose-ci.yml up 
-  - protractor conf/docker_config.js
+  - docker-compose -f docker-compose-ci.yml up --abort-on-container-exit --exit-code-from node

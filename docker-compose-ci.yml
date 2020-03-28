@@ -1,15 +1,15 @@
 version: '3'
 services:
   selenium:
-    image: vvoyer/selenium-standalone
+    image: selenium/standalone-chrome-debug
+    volumes: 
+      - /dev/shm:/dev/shm
     ports:
-      - "4444:4444/tcp"
+      - "4444:4444"
   app:
     build: .
     command: npm run dockerize_test
     depends_on:
-      - selenium
-    links:
       - selenium
 
   node:

@@ -11,4 +11,4 @@ install:
 
 script: 
   - docker-compose -f docker-compose-ci.yml up 
-  - npm test
+  - npm run dockerize_test

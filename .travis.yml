@@ -11,4 +11,4 @@ install:
 
 script: 
   - docker-compose -f docker-compose-ci.yml up 
-  - npm run dockerize_test
+  - protractor conf/docker_config.js

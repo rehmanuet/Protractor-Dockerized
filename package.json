@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dockerize_test": "protractor conf/docker_config.js",
-    "localize_test": "protractor conf/local_config.js"
+    "localize_test": "protractor conf/local_config.js",
+    "test": "protractor conf/docker_config.js"
   },
   "keywords": [],
   "author": "",

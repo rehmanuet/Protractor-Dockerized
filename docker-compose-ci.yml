@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: ./dockerfile
     command: 
-      - npm run dockerize_test
+      - npm test
     volumes:
       - /dev/shm:/dev/shm
     environment:

@@ -19,6 +19,8 @@ services:
     build:
       context: .
       dockerfile: ./dockerfile
+    command: 
+      - npm run dockerize_test
     volumes:
       - /dev/shm:/dev/shm
     environment:

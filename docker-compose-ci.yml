@@ -1,0 +1,26 @@
+version: '3'
+services:
+  selenium:
+    image: vvoyer/selenium-standalone
+    ports:
+      - "4444:4444/tcp"
+  app:
+    build: .
+    command: npm test --exit
+    depends_on:
+      - selenium
+    links:
+      - selenium
+
+  node:
+    container_name: e2e-protractor-test
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - HUB_HOST=selenium
+      - HUB_PORT=4444
+    depends_on:
+      - selenium

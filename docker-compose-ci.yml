@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   selenium-hub:
     image: selenium/hub:latest
@@ -6,9 +6,7 @@ services:
   chrome:
     image: selenium/node-chrome:latest
     volumes:
-    - /dev/shm:/dev/shm
-    depends_on:
-    - selenium-hub
+      - /dev/shm:/dev/shm
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
@@ -16,12 +14,15 @@ services:
     depends_on: 
       - selenium-hub
 
-    node:
-      container_name: e2e-tests-container
-      build:
-        context: .
-        dockerfile: ./dockerfile
-      volumes:
+  node:
+    container_name: e2e-tests-container
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    volumes:
       - /dev/shm:/dev/shm
-      depends_on:
-      - chrome
+    environment:
+      - HUB_HOST=selenium
+      - HUB_PORT=4444
+    depends_on:
+      - chome

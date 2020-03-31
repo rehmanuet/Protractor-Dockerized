@@ -1,19 +1,25 @@
+[![Build Status](https://travis-ci.org/rehmanuet/Protractor-Dockerized.svg?branch=master)](https://travis-ci.org/rehmanuet/Protractor-Dockerized)
+
 # ProtractorJS
 
 POC of Protractor with Jasmine Framework (Both Localize and Dockerize)
 
 ## Stack
 
-<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" />     <img src="https://static.javatpoint.com/images/javascript/javascript_logo.png?raw=true?raw=true" width="120" height="100" />     <img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="120" height="90" />                <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" />      
+<img src="https://angular.io/generated/images/marketing/concept-icons/protractor.png?raw=true?raw=true" width="100" height="100" />     <img src="https://static.javatpoint.com/images/javascript/javascript_logo.png?raw=true?raw=true" width="120" height="100" />     <img src="https://i.pinimg.com/originals/48/4d/9a/484d9a03c676a55671a9d257a48c4378.png?raw=true?raw=true" width="120" height="90" />                <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png?raw=true" width="100" height="100" /><img src="https://travis-ci.org/images/logos/TravisCI-Mascot-1.png?raw=true" width="100" height="100" />
 
 ## Features
 
 ```
-1- Implementation of Angular Based Application with Page object Model(3 - Layers)
-2- Jasmine Reporter
-3- Logs Recording
-4- Suites Management
+Test Application: AngularJS 
+Design Pattern: Page Object Model (3-Layers)
+Framework: Jasmine Framework
+Reporter: Jasmine Reporter
+Runner: Local (Native Chrome Driver) and Selenium Standalone Server
+Container: Docker
+CICD: Travis CI and GitHub Action Pipeline
 ```
+
 
 ## Getting Started
 

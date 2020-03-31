@@ -17,7 +17,7 @@ exports.config = {
  },
 
  framework: 'jasmine',
- seleniumAddress: 'http://localhost:4444/wd/hub',
+ seleniumAddress: 'http://selenium-hub:4444/wd/hub',
  specs: ['../test/tc1.js'],
 //  specs: ['../test/tc1.js','../test/tc2.js','../test/tc3.js','../test/tc4.js'],
  capabilities: {

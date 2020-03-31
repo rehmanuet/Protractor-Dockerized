@@ -4,7 +4,7 @@ services:
     image: selenium/hub:latest
 
   chrome:
-    image: selenium/node-chrome:latest
+    image: selenium/node-chrome:2.48.1
     volumes:
       - /dev/shm:/dev/shm
     environment:

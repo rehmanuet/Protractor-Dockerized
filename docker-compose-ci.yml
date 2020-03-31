@@ -10,7 +10,7 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
-      - START_XVFB=false
+      - START_XVFB=true
     depends_on: 
       - selenium-hub
 

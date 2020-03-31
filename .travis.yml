@@ -10,5 +10,4 @@ install:
   - docker-compose -f docker-compose-ci.yml build
 
 script: 
-  - docker-compose -f docker-compose-ci.yml up --build
-  - npm test
+  - docker-compose -f docker-compose-ci.yml up --build --abort-on-container-exit --exit-code-from node

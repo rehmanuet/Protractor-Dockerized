@@ -1,6 +1,6 @@
 FROM node:10
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 COPY . /app
-CMD [ "npm","test" ]
+CMD [ "protractor", "conf/docker_config.js" ]

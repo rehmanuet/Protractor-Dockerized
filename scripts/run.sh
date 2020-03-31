@@ -10,7 +10,7 @@ then
 fi
 
 # run tests and get the exit code
-protractor conf/docker_config.js || EXIT_CODE=$?
+npm test || EXIT_CODE=$?
 
 # generate report
 

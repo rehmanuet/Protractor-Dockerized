@@ -1,5 +1,5 @@
 # Protractor Framework | Docker | Travis CI
-<sup>Live Build Status:</sup><br />
+<sup>Live Build Status:</sup><br/>
 [![Build Status](https://travis-ci.org/rehmanuet/Protractor-Dockerized.svg?branch=master)](https://travis-ci.org/rehmanuet/Protractor-Dockerized)[![GitHub](https://github.com/rehmanuet/Protractor-Dockerized/workflows/CI/badge.svg)](https://github.com/rehmanuet/Protractor-Dockerized/actions)
 
 POC of Protractor with Jasmine Framework (Both Localize and Dockerize)
